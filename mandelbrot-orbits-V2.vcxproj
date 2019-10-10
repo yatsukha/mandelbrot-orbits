@@ -18,6 +18,29 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\common.hpp" />
+    <ClInclude Include="include\gl_util.hpp" />
+    <ClInclude Include="include\graphics_primitives.hpp" />
+    <ClInclude Include="include\keyboard_events.hpp" />
+    <ClInclude Include="include\mandelbrot.hpp" />
+    <ClInclude Include="include\mouse_events.hpp" />
+    <ClInclude Include="include\scope_guard.hpp" />
+    <ClInclude Include="include\shader.hpp" />
+    <ClInclude Include="include\shared_types.hpp" />
+    <ClInclude Include="include\strong_type.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\common.cpp" />
+    <ClCompile Include="src\glad.c" />
+    <ClCompile Include="src\gl_util.cpp" />
+    <ClCompile Include="src\graphics_primitives.cpp" />
+    <ClCompile Include="src\keyboard_events.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\mandelbrot.cpp" />
+    <ClCompile Include="src\mouse_events.cpp" />
+    <ClCompile Include="src\shader.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{6F2F4CE0-60E4-4B16-9AB5-DDE5442BF4FE}</ProjectGuid>
@@ -138,29 +161,6 @@
       <AdditionalDependencies>glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\Program Files\Libraries\glad-gl-4.6\src\glad.c" />
-    <ClCompile Include="common.cpp" />
-    <ClCompile Include="gl_util.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="mandelbrot.cpp" />
-    <ClCompile Include="shader.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="common.hpp" />
-    <ClInclude Include="mandelbrot.hpp" />
-    <ClInclude Include="scope_guard.hpp" />
-    <ClInclude Include="gl_util.hpp" />
-    <ClInclude Include="shader.hpp" />
-    <ClInclude Include="shared_types.hpp" />
-    <ClInclude Include="strong_type.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="fragment_line_shader.glsl" />
-    <None Include="fragment_shader.glsl" />
-    <None Include="vertex_line_shader.glsl" />
-    <None Include="vertex_shader.glsl" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
