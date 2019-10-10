@@ -17,6 +17,9 @@ namespace pr::gl {
       shader(shader const&) = delete;
       shader& operator=(shader const&) = delete;
 
+      shader(shader&&) = default;
+      shader& operator=(shader&&) = default;
+
       void activate();
   };
 
